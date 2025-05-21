@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,10 +14,21 @@
                 <img class="image" src="images/metal.jpg" alt="">
             </div>
             <div class="home__content">
-                <h1>Login</h1>
-                <p>Seja bem-vindo(a), novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-                <form action="login.php" method="post" class="login-form">
-                    
+                <h1 class="login-title">Login</h1>
+                <p class="login-welcome">Seja bem-vindo(a), novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+
+                <form action="login.php" method="post" autocomplete="on" class="login-form" >
+                    <div class="login-form__field">
+                        <i class="material-icons">person</i>
+                        <input type="email" name="email" id="email" placeholder="Seu e-mail" autocomplete="email" required>
+                    </div>
+                    <div class="login-form__field">
+                        <i class="material-icons">vpn_key</i>
+                        <input type="password" name="password" id="password" placeholder="Sua senha" autocomplete="current-password" required>
+                    </div>
+                    <input type="submit" value="Entrar" class="login-form__submit">
+                    <a href="html/forgot.html">Esqueci a senha <i class="material-icons">mail</i>
+                    </a>
                 </form>
             </div>
         </section>
